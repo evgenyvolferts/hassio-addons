@@ -1,0 +1,94 @@
+name: "apcupsd2mqtt php daemon"
+description: "Monitor multiple APC UPS devices via MQTT"
+version: "0.1"
+slug: "apcupsd2mqtt-php"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+services:
+  - mqtt:need
+startup: application
+boot: auto
+map:
+  - homeassistant_config:rw
+options:
+  interval: 10
+  mqttDiscoveryPrefix: homeassistant
+  devices:
+    - name: ups_test
+      host: 192.168.1.100
+      port: 3551
+      useFriendlyName: true
+  properties:
+    - APC
+    - DATE
+    - HOSTNAME
+    - UPSNAME
+    - VERSION
+    - CABLE
+    - MODEL
+    - UPSMODE
+    - STARTTIME
+    - STATUS
+    - LINEV
+    - LOADPCT
+    - BCHARGE
+    - TIMELEFT
+    - MBATTCHG
+    - MINTIMEL
+    - MAXTIME
+    - MAXLINEV
+    - MINLINEV
+    - OUTPUTV
+    - SENSE
+    - DWAKE
+    - DSHUTD
+    - DLOWBATT
+    - LOTRANS
+    - HITRANS
+    - RETPCT
+    - ITEMP
+    - ALARMDEL
+    - BATTV
+    - LINEFREQ
+    - LASTXFER
+    - NUMXFERS
+    - XONBATT
+    - TONBATT
+    - CUMONBATT
+    - XOFFBATT
+    - SELFTEST
+    - STESTI
+    - STATFLAG
+    - DIPSW
+    - REG1
+    - REG2
+    - REG3
+    - MANDATE
+    - SERIALNO
+    - BATTDATE
+    - NOMOUTV
+    - NOMINV
+    - NOMBATTV
+    - NOMPOWER
+    - HUMIDITY
+    - AMBTEMP
+    - EXTBATTS
+    - BADBATTS
+    - FIRMWARE
+    - APCMODEL
+    - END APC
+schema:
+  interval: int
+  mqttDiscoveryPrefix: str
+  devices:
+    - name: str
+      host: str
+      port: int
+      useFriendlyName: bool
+  properties:
+    - str

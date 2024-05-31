@@ -1,0 +1,2 @@
+#!/bin/sh
+exec php /opt/apcupsd2mqtt-php/start.php

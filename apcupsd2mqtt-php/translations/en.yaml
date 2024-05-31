@@ -1,0 +1,12 @@
+---
+configuration:
+  interval:
+    name: Information polling interval (in seconds)
+  mqttDiscoveryPrefix:
+    name: Prefix for the MQTT discovery topic (homeassistant by default)
+  devices:
+    name: Device list
+    description: See details in docs
+  properties:
+    name: UPS properties to monitor
+    description: Non-existent properties from this list will be ignored, see full list in docs
