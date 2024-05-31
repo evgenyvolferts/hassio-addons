@@ -1,7 +1,7 @@
-name: "apcupsd2mqtt php daemon"
-description: "Monitor multiple APC UPS devices via MQTT"
-version: "0.1"
-slug: "apcupsd2mqtt-php"
+name: apcupsd2mqtt php daemon
+description: Monitor multiple APC UPS devices via MQTT
+version: 0.1.1
+slug: apcupsd2mqtt-php
 init: false
 arch:
   - aarch64

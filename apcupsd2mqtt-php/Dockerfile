@@ -32,3 +32,6 @@ RUN composer install
 WORKDIR /
 
 COPY rootfs /
+
+COPY configure.sh /opt/
+RUN chmod a+x /opt/configure.sh
