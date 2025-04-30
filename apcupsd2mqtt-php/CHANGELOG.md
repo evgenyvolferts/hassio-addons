@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Fix configuring MQTT port
+- 
 ## 0.1.2
 
 - Fix checking cached data
