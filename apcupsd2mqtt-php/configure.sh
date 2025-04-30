@@ -5,7 +5,7 @@ MQTT_PORT=$(bashio::services mqtt "port")
 MQTT_USER=$(bashio::services mqtt "username")
 MQTT_PASSWORD=$(bashio::services mqtt "password")
 
-jq -n --arg mqttHost "$MQTT_HOST" --arg mqttPort "$MQTT_PORT" \
+jq -n --arg mqttHost "$MQTT_HOST" --argjson mqttPort "$MQTT_PORT" \
   --arg mqttUser "$MQTT_USER" --arg mqttPassword "$MQTT_PASSWORD" \
   --arg errorLog "" '$ARGS.named' > /opt/mqtt.json
 
